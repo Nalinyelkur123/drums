@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./a.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <a href="#" onclick="playAudio('drum1')"><img class=" drum1"
+        src="https://cdn.dribbble.com/users/814894/screenshots/2896154/drum.gif"></a>
+    <a href="#" onclick="playAudio('drum2')"><img class=" drum2"
+        src="https://cdn.dribbble.com/users/814894/screenshots/2896154/drum.gif"></a>
+    <a href="#" onclick="playAudio('drum3')"><img clsss=" drum3"
+        src="https://cdn.dribbble.com/users/814894/screenshots/2896154/drum.gif"></a>
+
+    <!-- <audio controls>
+      <source src="./drum1.mp3" type="audio/mpeg">
+    </audio>
+    <audio controls>
+      <source src="./drum2.mp3" type="audio/mpeg">
+    </audio>
+    <audio controls>
+      <source src="./drum3.mp3" type="audio/mpeg">
+    </audio> -->
+    <script>
+      var audio;
+      function playAudio(drum) {
+        if (audio) {
+          audio.pause();
+        }
+        audio = new Audio(`${drum}.mp3`);
+        audio.play();
+      }
+
+    </script>
+
+</body>
+
+</html>
